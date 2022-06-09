@@ -130,6 +130,8 @@ body {
 /*--------------------------------FIN INICIO-
 ---------------------------------
 ---------------------------*/
+
+
 /*-------------------------------MEDIA QUERIES-------------------------------*/
 @media screen and (max-width: 800px) {
   .bg-nav {
@@ -148,22 +150,24 @@ body {
     align-items: center;
     text-align: center;
     font-size: 1.5em; }
-  .container-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; }
-    .container-box .box-img {
-      width: 80%;
-      height: 30%;
+    .main-title-inicio .container-box {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 1em; }
+      text-align: center; }
+      .main-title-inicio .container-box .box-img {
+        width: 80%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1em; }
   /* -------------FIN INICIO------------------ */
+
+  
   /*-------------------NOSOTROS------------ */
   .body-grid-nosotros {
     display: grid;
