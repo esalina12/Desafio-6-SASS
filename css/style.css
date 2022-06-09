@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans', sans-serif; }
+
+body {
+  background-size: 100%;
+  background-image: url(/img/fondo6.jpeg);
+  background-attachment: fixed;
+  color: #f0f8ff; }
+
+/* ---------------------------------------------*/
+/*-----------------------HEADER----------------
+-----------------*/
+.header {
+  grid-area: header; }
+  .header .bg-nav {
+    background-color: #844DAD; }
+  .header .nav-link, .header .navbar-brand {
+    color: aliceblue;
+    text-decoration: none; }
+  .header .btn {
+    background-color: #844DAD;
+    color: aliceblue; }
+
+/*---------------------FIN HEADER
+---------------
+--------------*/
+/*-------------------FOOTER--------------------------*/
+.footer {
+  display: grid;
+  grid-area: footer; }
+
+.nav-footer {
+  background-color: #844DAD;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  .nav-footer .logo {
+    display: flex;
+    flex-direction: row;
+    width: 10em;
+    height: auto;
+    border-radius: 50%; }
+  .nav-footer h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 65%;
+    color: #f0f8ff; }
+  .nav-footer .box-footer {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .nav-footer .box-footer img {
+      width: 10%;
+      height: 100%;
+      border-radius: 50%; }
+    .nav-footer .box-footer .box-social {
+      width: auto;
+      height: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 5px; }
+      .nav-footer .box-footer .box-social img {
+        width: 3em;
+        height: 3em;
+        padding: 2px; }
+      .nav-footer .box-footer .box-social h4 {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        padding: 1px;
+        color: #f0f8ff; }
+
+/*---------------------FIN FOOTER
+-------------------
+------------------*/
+/*-------------------BODY GRID---------------------*/
+.body-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5em auto 1fr;
+  grid-template-areas: "header" "main" "footer"; }
+
+/*-------------------FIN BODY GRID
+--------------------------
+------------------*/
+@media screen and (max-width: 800px) {
+  .bg-nav {
+    justify-content: center;
+    align-items: center; }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  /* -----------INICIO-------------- */
+  .main-title-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; }
+  .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .container-box .box-img {
+      width: 80%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em; }
+  /* -------------FIN INICIO------------------ */
+  /*-------------------NOSOTROS------------ */
+  .body-grid-nosotros {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%; }
+  .main-nosotros {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir" "info" "mision" "objetivos"  "lema";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 20em 20em 20em;
+    gap: 2em; }
+  .dir img {
+    width: 70%;
+    height: 70%; }
+  .box-dir {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  .dir p {
+    font-size: 2em; }
+  .ceo, .vice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2em; }
+  .info {
+    width: 100%; }
+  .info-p {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1em; }
+  .mision, .objetivos, .lema {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
+  /* --------------FIN NOSOTROS-------------- */ }
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  /* ---------------------------INICIO------------ */
+  .bg-nav {
+    justify-content: center;
+    align-items: center; }
+  .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5em 0 5em 0; }
+  .box-footer {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  /* --------------FIN INICIO------------------ */
+  /*-------------------NOSOTROS------------ */
+  .main-nosotros {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir dir" "info info" "mision objetivos" "lema lema";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20em 20em;
+    gap: 2em; }
+  .box-dir {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  .dir p {
+    font-size: 2em; }
+  .ceo, .vice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2em; }
+  .info {
+    width: 100%; }
+  .info-p {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    padding: 1em; }
+  .mision, .objetivos, .lema {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
+  /* --------------FIN NOSOTROS-------------- */ }
+
+/*-----------------------------INICIO-------------------------------------------*/
+.main-inicio {
+  display: grid;
+  grid-area: main;
+  gap: 5px;
+  /*                Titulo                   */
+  /*                 Fin titulo               */ }
+  .main-inicio .carousel {
+    height: 70%; }
+  .main-inicio .main-title-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; }
+  .main-inicio .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5em 0 5em 0; }
+    .main-inicio .container-box .box-img {
+      width: 30%;
+      display: inline-block;
+      align-items: center; }
+      .main-inicio .container-box .box-img:hover {
+        transform: scale(1.5);
+        transition: all 2s; }
+      .main-inicio .container-box .box-img img {
+        width: 100%;
+        height: 70%; }
+
+/*--------------------------------FIN INICIO-
+---------------------------------
+---------------------------*/
+/*-------------------------------MEDIA QUERIES-------------------------------*/
+@media screen and (max-width: 800px) {
+  .bg-nav {
+    justify-content: center;
+    align-items: center; }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  /* -----------INICIO-------------- */
+  .main-title-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em; }
+  .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .container-box .box-img {
+      width: 80%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em; }
+  /* -------------FIN INICIO------------------ */
+  /*-------------------NOSOTROS------------ */
+  .body-grid-nosotros {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%; }
+  .main-nosotros {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir" "info" "mision" "objetivos"  "lema";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 20em 20em 20em;
+    gap: 2em; }
+  .dir img {
+    width: 70%;
+    height: 70%; }
+  .box-dir {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  .dir p {
+    font-size: 2em; }
+  .ceo, .vice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2em; }
+  .info {
+    width: 100%; }
+  .info-p {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1em; }
+  .mision, .objetivos, .lema {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
+  /* --------------FIN NOSOTROS-------------- */ }
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  /* ---------------------------INICIO------------ */
+  .bg-nav {
+    justify-content: center;
+    align-items: center; }
+  .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 5em 0 5em 0; }
+  .box-footer {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  /* --------------FIN INICIO------------------ */
+  /*-------------------NOSOTROS------------ */
+  .main-nosotros {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir dir" "info info" "mision objetivos" "lema lema";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20em 20em;
+    gap: 2em; }
+  .box-dir {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; }
+  .dir p {
+    font-size: 2em; }
+  .ceo, .vice {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2em; }
+  .info {
+    width: 100%; }
+  .info-p {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    font-size: 2em;
+    padding: 1em; }
+  .mision, .objetivos, .lema {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center; }
+  /* --------------FIN NOSOTROS-------------- */ }

@@ -1,0 +1,66 @@
+@import "../base/variables";
+
+.footer{
+    display: grid;
+    grid-area: footer;
+}
+
+.nav-footer{
+    background-color: $bg-principal;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    .logo{
+        display: flex;
+        flex-direction: row;
+        width: 10em;
+        height: auto;
+        border-radius: 50%;
+    }
+    h2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 65%;
+        color: $font-color;
+    }
+
+    .box-footer{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img{
+            width: 10%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .box-social{
+            width: auto;
+            height: 30%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            img{
+                width: 3em;
+                height: 3em;
+                padding: 2px;
+            }
+            h4{
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                padding: 1px;
+                color: $font-color;
+            }
+        }
+    }
+
+}
