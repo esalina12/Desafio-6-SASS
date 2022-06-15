@@ -1,0 +1,31 @@
+.body-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+
+.main-nc{
+    grid-area: main;
+    img{
+        width: 60%;
+        height: 60%;
+        border-radius: 20%;
+    }
+
+    #box-refer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    
+        &:hover{
+            transform: scale(1.5);
+        transition: all 2s;
+        }
+    }
+}

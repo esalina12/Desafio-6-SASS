@@ -1,4 +1,4 @@
-@import "../base/variables";
+@import "//scss/base/variables";
 
 .header{ 
     grid-area: header;
@@ -7,11 +7,26 @@
         background-color: $bg-principal;
     }
     .nav-link, .navbar-brand{
-        color: aliceblue;
+        color: $font-color;
         text-decoration: none;
     }
     .btn{
         background-color: $bg-principal;
-        color: aliceblue;
+        color: $font-color;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .bg-nav{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 }

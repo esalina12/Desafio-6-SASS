@@ -1,35 +1,71 @@
+@import "//scss/base/variables";
+@import "//base/variables";
+@import "//scss/componentes/mixins";
+@import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
+@import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Noto Sans', sans-serif; }
+  font-family: "Noto Sans", sans-serif;
+}
 
 body {
   background-size: 100%;
   background-image: url(/img/fondo6.jpeg);
   background-attachment: fixed;
-  color: #f0f8ff; }
+  color: #f0f8ff;
+}
 
+/*-------------------BODY GRID---------------------*/
+.body-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 5em auto 1fr;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/*-------------------FIN BODY GRID
+--------------------------
+------------------*/
 /* ---------------------------------------------*/
 /*-----------------------HEADER----------------
 -----------------*/
 .header {
-  grid-area: header; }
-  .header .bg-nav {
-    background-color: #844DAD; }
-  .header .nav-link, .header .navbar-brand {
-    color: aliceblue;
-    text-decoration: none; }
-  .header .btn {
-    background-color: #844DAD;
-    color: aliceblue; }
+  grid-area: header;
+}
+.header .bg-nav {
+  background-color: #844DAD;
+}
+.header .nav-link, .header .navbar-brand {
+  color: #f0f8ff;
+  text-decoration: none;
+}
+.header .btn {
+  background-color: #844DAD;
+  color: #f0f8ff;
+}
 
+@media screen and (max-width: 800px) {
+  .bg-nav {
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
 /*---------------------FIN HEADER
 ---------------
 --------------*/
 /*-------------------FOOTER--------------------------*/
 .footer {
-  display: grid;
-  grid-area: footer; }
+  grid-area: footer;
+}
 
 .nav-footer {
   background-color: #844DAD;
@@ -37,248 +73,354 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
-  .nav-footer .logo {
+  flex-wrap: wrap;
+}
+@media (max-width: 800px) {
+  .nav-footer .nav-footer {
     display: flex;
-    flex-direction: row;
-    width: 10em;
-    height: auto;
-    border-radius: 50%; }
-  .nav-footer h2 {
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.nav-footer .logo {
+  display: flex;
+  flex-direction: row;
+  width: 10em;
+  height: auto;
+  border-radius: 50%;
+}
+.nav-footer h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 65%;
+  color: #f0f8ff;
+}
+.nav-footer .box-footer {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 800px) {
+  .nav-footer .box-footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 65%;
-    color: #f0f8ff; }
-  .nav-footer .box-footer {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .nav-footer .box-footer img {
-      width: 10%;
-      height: 100%;
-      border-radius: 50%; }
-    .nav-footer .box-footer .box-social {
-      width: auto;
-      height: 30%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin: 5px; }
-      .nav-footer .box-footer .box-social img {
-        width: 3em;
-        height: 3em;
-        padding: 2px; }
-      .nav-footer .box-footer .box-social h4 {
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        padding: 1px;
-        color: #f0f8ff; }
+  }
+}
+.nav-footer .box-footer img {
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+}
+.nav-footer .box-footer .box-social {
+  width: auto;
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.nav-footer .box-footer .box-social img {
+  width: 3em;
+  height: 3em;
+  padding: 2px;
+}
+.nav-footer .box-footer .box-social h4 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 1px;
+  color: #f0f8ff;
+}
 
 /*---------------------FIN FOOTER
 -------------------
-------------------*/
-/*-------------------BODY GRID---------------------*/
-.body-grid {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 5em auto 1fr;
-  grid-template-areas: "header"
- "main"
- "footer"; }
-
-/*-------------------FIN BODY GRID
---------------------------
 ------------------*/
 /*-----------------------------INICIO-------------------------------------------*/
 .main-inicio {
   display: grid;
   grid-area: main;
   gap: 5px;
-  /*                Titulo                   */
-  /*                 Fin titulo               */ }
-  .main-inicio .carousel {
-    height: 70%; }
+}
+.main-inicio .carousel {
+  height: 70%;
+}
+.main-inicio .main-title-inicio {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+@media (max-width: 800px) {
   .main-inicio .main-title-inicio {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 2em; }
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+.main-inicio .container-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 5em 0 5em 0;
+}
+@media (max-width: 800px) {
   .main-inicio .container-box {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 5em 0 5em 0; }
-    .main-inicio .container-box .box-img {
-      width: 30%;
-      display: inline-block;
-      align-items: center; }
-      .main-inicio .container-box .box-img:hover {
-        transform: scale(1.5);
-        transition: all 2s; }
-      .main-inicio .container-box .box-img img {
-        width: 100%;
-        height: 70%; }
-
-/*--------------------------------FIN INICIO-
----------------------------------
----------------------------*/
-
-
-/*-------------------------------MEDIA QUERIES-------------------------------*/
-@media screen and (max-width: 800px) {
-  .bg-nav {
-    justify-content: center;
-    align-items: center; }
-  .nav-footer {
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center; }
-  /* -----------INICIO-------------- */
-  .main-title-inicio {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.5em; }
-    .main-title-inicio .container-box {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-      .main-title-inicio .container-box .box-img {
-        width: 80%;
-        height: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1em; }
-  /* -------------FIN INICIO------------------ */
-
-  
-  /*-------------------NOSOTROS------------ */
-  .body-grid-nosotros {
-    display: grid;
-    grid-template-areas: "header"
- "main"
- "footer";
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 100%; }
-  .main-nosotros {
-    grid-area: main;
-    display: grid;
-    grid-template-areas: "dir"
- "info"
- "mision"
- "objetivos" 
- "lema";
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto 20em 20em 20em;
-    gap: 2em; }
-  .dir img {
-    width: 70%;
-    height: 70%; }
-  .box-dir {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; }
-  .dir p {
-    font-size: 2em; }
-  .ceo, .vice {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 2em; }
-  .info {
-    width: 100%; }
-  .info-p {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    font-size: 1em;
-    padding: 1em; }
-  .mision, .objetivos, .lema {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-items: center; }
-  /* --------------FIN NOSOTROS-------------- */ }
-
-@media (min-width: 800px) and (max-width: 1000px) {
-  /* ---------------------------INICIO------------ */
-  .bg-nav {
-    justify-content: center;
-    align-items: center; }
-  .container-box {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 5em 0 5em 0; }
-  .box-footer {
-    width: 20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-  /* --------------FIN INICIO------------------ */
-  /*-------------------NOSOTROS------------ */
-  .main-nosotros {
-    grid-area: main;
-    display: grid;
-    grid-template-areas: "dir dir"
- "info info"
- "mision objetivos"
- "lema lema";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto 20em 20em;
-    gap: 2em; }
-  .box-dir {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center; }
-  .dir p {
-    font-size: 2em; }
-  .ceo, .vice {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 2em; }
-  .info {
-    width: 100%; }
-  .info-p {
+  }
+}
+.main-inicio .container-box .box-img {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .main-inicio .container-box .box-img {
     width: 80%;
+    height: 30%;
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 2em;
-    padding: 1em; }
-  .mision, .objetivos, .lema {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    justify-items: center; }
-  /* --------------FIN NOSOTROS-------------- */ }
+    padding: 1em;
+  }
+}
+.main-inicio .container-box .box-img:hover {
+  transform: scale(1.5);
+  transition: all 2s;
+}
+.main-inicio .container-box img {
+  width: 100%;
+  height: 70%;
+}
+
+/*-----------------------------------NOSOTROS-------------------------------------*/
+.main-nosotros {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "dir dir dir" "info info info" "mision objetivos lema";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 30em;
+  gap: 2em;
+}
+
+.dir {
+  grid-area: dir;
+}
+.dir img {
+  height: 30em;
+  border-radius: 50%;
+}
+.dir p {
+  font-size: 3em;
+}
+.dir .box-dir {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.dir .box-dir .ceo, .dir .box-dir .vice {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.info {
+  grid-area: info;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.info .info-p {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  font-size: 2em;
+}
+
+.mision {
+  grid-area: mision;
+}
+
+.objetivos {
+  grid-area: objetivos;
+}
+
+.lema {
+  grid-area: lema;
+}
+
+.mision, .objetivos, .lema {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+.mision img, .objetivos img, .lema img {
+  border-radius: 50%;
+}
+
+/*------------------------------------FIN NOSOTROS-------------------------------*/
+/* ------------------------- NUESTROS CLIENTES---------------------------------- */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+.main-nc {
+  grid-area: main;
+}
+.main-nc img {
+  width: 60%;
+  height: 60%;
+  border-radius: 20%;
+}
+.main-nc #box-refer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.main-nc #box-refer:hover {
+  transform: scale(1.5);
+  transition: all 2s;
+}
+
+/* --------------------------- FIN NUESTROS CLIENTES----------------------- */
+/* -----------------------------CONTACTO-------------------------------- */
+.body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+  gap: 2em;
+}
+
+.main-contacto {
+  width: 100%;
+  height: auto;
+  grid-area: main;
+}
+.main-contacto img {
+  width: 10vh;
+  height: 10vh;
+}
+
+/* ---------------FIN CONTACTO---------------- */
+/* ------------------------SERVICIOS---------------------------- */
+.body-grid-servicios {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+
+.main-servicios {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50em 20em 20em;
+  grid-template-areas: "ns ns ns" "op1 op2 op3" "op4 op5 op6";
+  justify-content: center;
+  justify-items: center;
+}
+
+.img-ns {
+  grid-area: ns;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.img-ns img {
+  width: 100%;
+  height: 80%;
+}
+
+.img-ns p {
+  width: 30%;
+  font-size: 25px;
+  position: absolute;
+  bottom: 6em;
+  z-index: 1;
+  color: black;
+}
+
+.op1 {
+  grid-area: op1;
+}
+
+.op2 {
+  grid-area: op2;
+}
+
+.op3 {
+  grid-area: op3;
+}
+
+.op4 {
+  grid-area: op4;
+}
+
+.op5 {
+  grid-area: op5;
+}
+
+.op6 {
+  grid-area: op6;
+}
+
+.op1, .op2, .op3, .op4, .op5, .op6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.op1 img, .op2 img, .op3 img, .op4 img, .op5 img, .op6 img {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 30%;
+}
+
+/*--------------------------FIN SERVICIOS-----------------------------*/
+/*-------------------------------MEDIA QUERIES-------------------------------*/
+
+/*# sourceMappingURL=style.css.map */

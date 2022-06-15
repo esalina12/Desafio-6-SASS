@@ -1,0 +1,76 @@
+
+@import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
+
+.main-nosotros{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir dir dir"
+    "info info info"
+    "mision objetivos lema";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 30em;
+    gap: 2em;
+}
+
+.dir{
+    grid-area: dir;
+    img{
+        height: 30em;
+        border-radius: 50%;
+    }
+    
+    p{
+        font-size: 3em;
+    }
+
+    .box-dir{
+        width: 100%;
+        @include ds-flex(row,space-evenly);
+        .ceo, .vice{
+            width: 30%;
+            @include ds-flex(column,center);
+            align-items: center;
+            padding: 2em;
+
+        }
+    }
+}
+
+
+.info{
+    grid-area: info;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .info-p{
+        width: 80%;
+        @include ds-flex(row,center);
+        justify-items: center;
+        font-size: 2em;
+    }
+}
+
+
+.mision{
+    grid-area: mision;
+}
+
+.objetivos{
+    grid-area: objetivos;
+}
+.lema{
+    grid-area: lema;
+}
+
+.mision, .objetivos, .lema{
+    width: 100%;
+    @include ds-flex(row,center);
+    justify-items: center;
+    padding-top: 5em;
+    padding-bottom: 3em;
+
+    img{
+        border-radius: 50%;
+    }
+}

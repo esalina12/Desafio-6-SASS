@@ -1,0 +1,20 @@
+.body-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header"
+    "main main main"
+    "footer footer footer";
+    gap: 2em;
+}
+
+.main-contacto{
+    width: 100%;
+    height: auto;
+    grid-area: main;
+
+    img{
+        width: 10vh;
+        height: 10vh;
+    }
+}

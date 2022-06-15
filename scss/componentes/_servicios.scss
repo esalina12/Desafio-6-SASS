@@ -1,0 +1,74 @@
+.body-grid-servicios{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+.main-servicios{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50em 20em 20em;
+    grid-template-areas:
+    "ns ns ns"
+    "op1 op2 op3"
+    "op4 op5 op6";
+    justify-content: center;
+    justify-items: center;
+}
+
+.img-ns{
+    grid-area: ns;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.img-ns img{
+    width: 100%;
+    height: 80%;
+}
+
+.img-ns p{
+    width: 30%;
+    font-size: 25px;
+    position: absolute;
+    bottom: 6em;
+    z-index: 1;
+    color: black;
+}
+
+.op1{
+    grid-area: op1;
+}
+.op2{
+    grid-area: op2;
+}
+.op3{
+    grid-area: op3;
+}
+.op4{
+    grid-area: op4;
+}
+.op5{
+    grid-area: op5;
+}
+.op6{
+    grid-area: op6;
+}
+
+.op1, .op2, .op3, .op4, .op5, .op6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.op1 img, .op2 img, .op3 img, .op4 img, .op5 img, .op6 img{
+    width: 30vh;
+    height: 30vh;
+    border-radius: 30%;
+}
