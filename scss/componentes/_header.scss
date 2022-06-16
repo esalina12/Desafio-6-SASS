@@ -1,10 +1,16 @@
 @import "//scss/base/variables";
+@import "//scss/componentes/body-grid";
 
 .header{ 
     grid-area: header;
     
     .bg-nav{
         background-color: $bg-principal;
+
+        @media (max-width: 800px){
+            justify-content: center;
+            align-items: center;
+        }
     }
     .nav-link, .navbar-brand{
         color: $font-color;
@@ -13,20 +19,5 @@
     .btn{
         background-color: $bg-principal;
         color: $font-color;
-    }
-}
-
-@media screen and (max-width: 800px) {
-
-    .bg-nav{
-        justify-content: center;
-        align-items: center;
-    }
-
-    .nav-footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
     }
 }
