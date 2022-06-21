@@ -1,17 +1,19 @@
 {
-  "name": "proyecto-final",
+  "name": "M-Tech-Salina",
   "version": "1.0.0",
-  "description": "",
+  "description": "Somos una empresa de informática para la salud. Ofrecemos soluciones tecnologicas para las instituciones de la salud, con la idea de mejorar el funcionamiento y la comunicacion entre las mismas, los profesionales y pacientes.
+  https://github.com/esalina12/M-Tech-Salina",
   "main": "index.js",
   "scripts": {
     "test": "echo\"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/styles.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
+  "author": "Ezequiel Salina",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "bootstrap.Tooltip.VERSION": "5.2.0-beta1"
   }
 }
