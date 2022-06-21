@@ -2,8 +2,12 @@
 @import "//scss/componentes/body-grid";
 @import "//base/variables";
 @import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
 @import "//scss/componentes/mixins";
 @import "//scss/componentes/body-grid";
+@import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
+@import "//componentes/body-grid";
 @import "//scss/componentes/mixins";
 @import "//scss/componentes/body-grid";
 * {
@@ -42,7 +46,12 @@ body {
 @media (max-width: 800px) {
   .header .bg-nav {
     justify-content: center;
-    align-items: center;
+  }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .header .bg-nav {
+    justify-content: space-evenly;
+    align-content: center;
   }
 }
 .header .nav-link, .header .navbar-brand {
@@ -52,6 +61,9 @@ body {
 .header .btn {
   background-color: #844DAD;
   color: #f0f8ff;
+}
+.header h1 {
+  text-align: center;
 }
 
 /*---------------------FIN HEADER
@@ -108,6 +120,14 @@ body {
     justify-content: center;
   }
 }
+@media (min-width: 800px) and (max-width: 1000px) {
+  .nav-footer .box-footer {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 .nav-footer .box-footer img {
   width: 10%;
   height: 100%;
@@ -159,9 +179,8 @@ body {
   .main-inicio .main-title-inicio {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     font-size: 1.5em;
   }
@@ -180,8 +199,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    align-items: center;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .main-inicio .container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5em 0 5em 0;
   }
 }
 .main-inicio .container-box .box-img {
@@ -211,15 +240,6 @@ body {
 }
 
 /*-----------------------------------NOSOTROS-------------------------------------*/
-@media (max-width: 800px) {
-  .body-grid {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 80%;
-  }
-}
-
 .main-nosotros {
   grid-area: main;
   display: grid;
@@ -235,29 +255,58 @@ body {
     grid-template-areas: "dir" "info" "mision" "objetivos" "lema";
     grid-template-columns: 100%;
     grid-template-rows: auto auto 20em 20em 20em;
-    gap: 2em;
+  }
+}
+@media (min-width: 801px) and (max-width: 1400px) {
+  .main-nosotros {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "dir dir" "info info" "mision objetivos" "lema lema";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 20em 20em;
   }
 }
 
+/*FOTOS DIRECTIVOS*/
 .dir {
   grid-area: dir;
 }
 .dir img {
-  height: 30em;
+  height: 40vh;
   border-radius: 50%;
 }
 @media (max-width: 800px) {
   .dir img {
-    width: 70%;
-    height: 70%;
+    height: 15vh;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .dir img {
+    height: 20vh;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .dir img {
+    height: 25vh;
   }
 }
 .dir p {
   font-size: 3em;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .dir p {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .dir p {
     font-size: 2em;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .dir p {
+    font-size: 2.5em;
   }
 }
 .dir .box-dir {
@@ -272,6 +321,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 .dir .box-dir .ceo, .dir .box-dir .vice {
@@ -292,6 +342,7 @@ body {
   }
 }
 
+/* FIN FOTOS DIRECTIVOS */
 .info {
   grid-area: info;
   width: 100%;
@@ -299,17 +350,13 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-@media (max-width: 800px) {
-  .info {
-    width: 100%;
-  }
-}
 .info .info-p {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 2em;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .info .info-p {
@@ -318,12 +365,17 @@ body {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 1em;
   }
 }
+@media (min-width: 801px) and (max-width: 1200px) {
+  .info .info-p {
+    font-size: 1.5em;
+  }
+}
 
+/* FOTOS M V L*/
 .mision {
   grid-area: mision;
 }
@@ -337,87 +389,155 @@ body {
 }
 
 .mision, .objetivos, .lema {
-  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 5em;
-  padding-bottom: 3em;
+  align-content: center;
+  align-items: center;
 }
 @media (max-width: 800px) {
   .mision, .objetivos, .lema {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 }
 .mision img, .objetivos img, .lema img {
   border-radius: 50%;
+  width: 30vh;
+  height: 30vh;
 }
 @media (max-width: 800px) {
   .mision img, .objetivos img, .lema img {
-    width: 100%;
+    width: 15vh;
+    height: 15vh;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .mision img, .objetivos img, .lema img {
+    width: 20vh;
+    height: 20vh;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .mision img, .objetivos img, .lema img {
+    width: 25vh;
+    height: 25vh;
   }
 }
 
+/* FIN FOTOcontent*/
 /*------------------------------------FIN NOSOTROS-------------------------------*/
 /* ------------------------- NUESTROS CLIENTES---------------------------------- */
-.body-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-}
-
 .main-nc {
   grid-area: main;
 }
 .main-nc img {
-  width: 60%;
-  height: 60%;
+  width: 30vh;
+  height: 30vh;
   border-radius: 20%;
+}
+@media (max-width: 800px) {
+  .main-nc img {
+    width: 10vh;
+    height: 10vh;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  .main-nc img {
+    width: 20vh;
+    height: 20vh;
+  }
 }
 .main-nc #box-refer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-items: center;
   align-items: center;
 }
 .main-nc #box-refer:hover {
   transform: scale(1.5);
   transition: all 2s;
 }
+@media (max-width: 800px) {
+  .main-nc #box-refer {
+    margin: 2em 0 2em 0;
+  }
+}
 
 /* --------------------------- FIN NUESTROS CLIENTES----------------------- */
 /* -----------------------------CONTACTO-------------------------------- */
-.body-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-  gap: 2em;
-}
-
 .main-contacto {
   width: 100%;
   height: auto;
   grid-area: main;
+  margin: 5em 0 5em 0;
+}
+@media (max-width: 800px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "map" "wp" "tel" "mail";
+  }
 }
 .main-contacto img {
   width: 10vh;
   height: 10vh;
 }
+@media (max-width: 800px) {
+  .main-contacto img {
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  #map {
+    grid-area: map;
+  }
+}
+
+@media (max-width: 800px) {
+  #wp {
+    grid-area: wp;
+  }
+}
+
+@media (max-width: 800px) {
+  #tel {
+    grid-area: tel;
+  }
+}
+
+@media (max-width: 800px) {
+  #mail {
+    grid-area: mail;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1400px) {
+  .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1400px) {
+  #cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /* ---------------FIN CONTACTO---------------- */
 /* ------------------------SERVICIOS---------------------------- */
-.body-grid-servicios {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-}
-
 .main-servicios {
   grid-area: main;
   display: grid;
@@ -427,6 +547,15 @@ body {
   justify-content: center;
   justify-items: center;
 }
+@media (min-width: 600px) and (max-width: 1200px) {
+  .main-servicios {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "ns ns" "op1 op2" "op3 op4" "op5 op6";
+  }
+}
 
 .img-ns {
   grid-area: ns;
@@ -434,12 +563,10 @@ body {
   display: inline-block;
   position: relative;
 }
-
 .img-ns img {
   width: 100%;
   height: 80%;
 }
-
 .img-ns p {
   width: 30%;
   font-size: 25px;
@@ -447,6 +574,17 @@ body {
   bottom: 6em;
   z-index: 1;
   color: black;
+  margin-left: 1em;
+}
+@media (max-width: 800px) {
+  .img-ns p {
+    display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .img-ns p {
+    width: 50%;
+  }
 }
 
 .op1 {
@@ -475,8 +613,9 @@ body {
 
 .op1, .op2, .op3, .op4, .op5, .op6 {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   margin-bottom: 5em;
 }
 
@@ -485,8 +624,19 @@ body {
   height: 30vh;
   border-radius: 30%;
 }
+@media (max-width: 800px) {
+  .op1 img, .op2 img, .op3 img, .op4 img, .op5 img, .op6 img {
+    width: 15vh;
+    height: 15vh;
+  }
+}
+@media (min-width: 800px) and (max-width: 1400px) {
+  .op1 img, .op2 img, .op3 img, .op4 img, .op5 img, .op6 img {
+    width: 20vh;
+    height: 20vh;
+  }
+}
 
 /*--------------------------FIN SERVICIOS-----------------------------*/
-/*-------------------------------MEDIA QUERIES-------------------------------*/
 
 /*# sourceMappingURL=style.css.map */

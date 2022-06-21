@@ -19,8 +19,7 @@
 
         @media (max-width: 800px) {
             width: 100%;
-            @include ds-flex(row, center);
-            align-items: center;
+            @include ds-flex(column, center);
             text-align: center;
             font-size: 1.5em;
         }
@@ -36,8 +35,15 @@
         @media (max-width: 800px){
             width: 100%;
             @include ds-flex(column,center);
-            align-items: center;
             text-align: center;
+            align-items: center;
+        }
+
+        @media (min-width: 800px) and (max-width: 1000px){
+            width: 100%;
+            @include ds-flex(row,space-evenly);
+            flex-wrap: wrap;
+            margin: 5em 0 5em 0;
         }
 
         .box-img{

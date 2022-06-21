@@ -1,31 +1,35 @@
-.body-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "header header header"
-    "main main main"
-    "footer footer footer";
-}
-
+@import "//componentes/body-grid";
 
 .main-nc{
     grid-area: main;
+    
     img{
-        width: 60%;
-        height: 60%;
+        width: 30vh;
+        height: 30vh;
         border-radius: 20%;
+        @media (max-width: 800px){
+            width: 10vh;
+            height: 10vh;
+        }
+        @media (min-width: 801px) and (max-width: 1200px){
+            width: 20vh;
+            height: 20vh;
+        }
     }
 
     #box-refer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
+        @include ds-flex(column,center);
         align-items: center;
-    
+
         &:hover{
             transform: scale(1.5);
         transition: all 2s;
         }
+
+        @media (max-width: 800px){
+            margin: 2em 0 2em 0;
+        }
+        
     }
+
 }

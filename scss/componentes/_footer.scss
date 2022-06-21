@@ -1,5 +1,6 @@
 @import "//base/variables";
 @import "//scss/componentes/mixins";
+@import "//scss/componentes/body-grid";
 
 .footer{
     grid-area: footer;
@@ -35,6 +36,11 @@
         @include ds-flex(column,center);
 
         @media (max-width: 800px){
+            @include ds-flex(row,center);
+        }
+
+        @media (min-width: 800px) and (max-width: 1000px){
+            width: 20%;
             @include ds-flex(row,center);
         }
         img{
