@@ -6,22 +6,27 @@
     display: grid;
     grid-area: main;
     gap: 5px;
-
-    .carousel{
-        height: 70%;
-    }
     
     
     .main-title-inicio{
         @include ds-flex(row,center);
         align-items: center;
-        font-size: 2em;
-
-        @media (max-width: 800px) {
+        text-align: center;
+        background-color: $bg-principal-transparente;
+        margin: 5rem 0 5rem 0;
+        
+        
+        @media (min-width: 100px) and (max-width:1000px) {
             width: 100%;
             @include ds-flex(column, center);
             text-align: center;
-            font-size: 1.5em;
+        }
+
+        p{
+            font-size: 2rem;
+            @media (min-width: 100px) and (max-width:1000px){
+                font-size: 1.5rem;
+            }
         }
     }
     
@@ -30,7 +35,7 @@
         width: 100%;
         @include ds-flex(row,space-evenly);
         text-align: center;
-        margin: 5em 0 5em 0;
+        margin: 2em 0 2em 0;
 
         @media (max-width: 800px){
             width: 100%;
@@ -39,7 +44,7 @@
             align-items: center;
         }
 
-        @media (min-width: 800px) and (max-width: 1000px){
+        @media (min-width: 100px) and (max-width: 1000px){
             width: 100%;
             @include ds-flex(row,space-evenly);
             flex-wrap: wrap;
@@ -47,26 +52,31 @@
         }
 
         .box-img{
-            width: 30%;
+            width: 25%;
             @include ds-flex(column,center);
             align-items: center;
 
-            @media (max-width: 800px){
-                width: 80%;
-                height: 30%;
+            @media (min-width: 100px) and (max-width:1000px){
+                width: 60%;
+                height: 20%;
                 @include ds-flex(column,center);
-                padding: 1em;
+                margin: 1em 0 1em 0;
             }
 
             &:hover{
-                transform: scale(1.5);
+                transform: scale(1.2);
                 transition: all 2s;
+                @media (min-width: 100px) and (max-width: 1000px){
+                    transform: none;
+                    transition: none;
+                }
             }
         }
     
             img{
                 width: 100%;
                 height: 70%;
+               
             }
         }
 }

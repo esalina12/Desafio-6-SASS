@@ -3,6 +3,7 @@
 
 .header{ 
     grid-area: header;
+    z-index: 10;
     
     .bg-nav{
         background-color: $bg-principal;
@@ -26,7 +27,11 @@
     }
 
     h1{
+        @include ds-flex(column,center);
+        align-items: center;
         text-align: center;
+        width: 65%;
+        color: $font-color;
     }
     
 }

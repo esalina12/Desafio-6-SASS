@@ -5,29 +5,48 @@
     
     img{
         width: 30vh;
-        height: 30vh;
+        height: 25vh;
         border-radius: 20%;
+        margin: 0 0 1rem 0;
         @media (max-width: 800px){
             width: 10vh;
             height: 10vh;
         }
-        @media (min-width: 801px) and (max-width: 1200px){
-            width: 20vh;
-            height: 20vh;
+        @media (min-width: 801px) and (max-width: 1000px){
+            width: 15vh;
+            height: 15vh;
         }
     }
 
     #box-refer{
         @include ds-flex(column,center);
         align-items: center;
+        margin: 3em 0 3em 0;
 
         &:hover{
-            transform: scale(1.5);
-        transition: all 2s;
+            transform: scale(1.2);
+            transition: all 2s;
+            @media (max-width: 800px){
+                transform: none;
+                transition: none;
+            }
         }
 
         @media (max-width: 800px){
             margin: 2em 0 2em 0;
+            font-size: 1.5rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+            @media (max-width: 800px){
+                font-size: 1rem;
+            }
+
+            @media (min-width:801px) and (max-width:1000px){
+                font-size: 1.2rem;
+            }
+
         }
         
     }

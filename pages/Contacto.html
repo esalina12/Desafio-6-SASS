@@ -21,7 +21,7 @@
     <!-- Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <title>Contactos - M-Tech - Soluciones informaticas para la salud</title>
 </head>
 <body>
@@ -30,18 +30,17 @@
 
          <!-- Menu nav / Encabezado -->
 
-         <header class="header">
-          <!-- Menu nav / Encabezado -->
+        <header class="header">
           <nav class="navbar navbar-expand-lg bg-nav">
-              <h1 class="navbar-brand fs-1 ms-5" href="#">M-Tech | Soluciones informaticas</h1>
+              <h1 class="navbar-brand ">M-Tech | Soluciones informaticas</h1>
               <div class="container-fluid">
                 <button class="navbar-toggler btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                  <ul class="navbar-nav fs-4">
+                  <ul class="navbar-nav fs-3">
                     <li class="nav-item">
-                      <a class="nav-link" href="index.html">Inicio</a>
+                      <a class="nav-link" href="/index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="Nosotros.html">Nosotros</a>
@@ -53,47 +52,77 @@
                       <a class="nav-link" href="Nuestros clientes.html">Nuestros clientes</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/pages/Contacto.html">Contacto</a>
+                      <a class="nav-link" href="Contacto.html">Contacto</a>
                     </li>
                   </ul>
                 </div>
               </div>
           </nav>
-    </header>
+        </header>
         <!-- Fin encabezado -->
 
         <!-- Seccion central -->
         <main class="main-contacto">
             <!-- Mapa -->
-            <section class="container-fluid">
+            <section class="container">
                 <div class="row justify-content-center map">
-                
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13133.382347788409!2d-58.497270750000006!3d-34.6207061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9c064e1f081%3A0xc4e3e9b8b7c7a2e!2sEl%20Corral%C3%B3n%20de%20Floresta!5e0!3m2!1ses-419!2sar!4v1651539862711!5m2!1ses-419!2sar" width="70%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="col-10 justify-content-center"></iframe>
                 </div>
-                <div class="row mt-5">
-                    <h2 class="col text-center mt-4">Av. Gaona 4660, C1407FIU Buenos Aires</h2> 
+                <div class="row justify-content-center align-items-center mt-5 direccion">
+                    <img src="/img/logo-ubi.png" alt="Ubicacion" class="col-6">
+                    <p class="col-6 text-center mt-4">Av. Gaona 4660, C1407FIU Buenos Aires <br><br>Lunes a Viernes 9 a 17 hs.</p> 
                 </div>
             </section>
             <!-- Fin mapa -->
 
+            <!-- Formulario de contacto -->
+            <section>
+              <div class="formulario">
+              <br><h2>Escribinos tus dudas o consultas</h2>
+              <form action="form.php" method="post" class="form-control">
+                <div class="form-row">
+                    <label for="full-name" class="form-label">Nombre</label><br>
+                    <input id="full-name" name="name" class="form-control" type="text">
+                </div><br>
+                <div class="form-row">
+                    <label for="email" class="form-label">Email</label><br>
+                    <input id="email" name="email" type="email" class="form-control">
+                </div><br>
+                <div class="form-row">
+                  <label for="telefono" class="form-label">Telefono</label><br>
+                  <input id="telefono" name="telefono" type="number" class="form-control">
+                </div><br>
+                <div class="form-row">
+                  <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label><br>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+                </div><br>
+                <div class="form-row">
+                  <button class="btn btn-secondary btn-sm">Enviar</button>
+                </div>
+              </form>
               <!-- Medio de contacto -->
-              <section class="container justify-content-center" id="cont">
-                <div class="row justify-content-center contacto">
-                    <div class="col d-flex justify-content-start align-items-center mt-5" id="wp">
-                        <img src="../img/icono-whatsapp.jpg" alt="Contacto1" class="me-5">
-                        <h4 class="text-center">Whatsapp</h4>
+              <section class="w-100 justify-content-center">
+                <div class="row" id="contacto">
+                    <div class="col-md-4 col-lg-4 mt-5" id="wp">
+                        <img src="/img/logo-wp.jpg" alt="Whatsapp+54-11-57892350">
+                        <h5>+54 11 57892350</h5>
                     </div>
-                    <div class="col d-flex justify-content-center align-items-center mt-5" id="tel">
-                        <img src="../img/telefono.jpg" alt="Contacto2" class=" me-5">
-                        <h4 class="text-center">telefono</h4>
+                    <div class="col-md-4 col-lg-4 mt-5" id="tel">
+                        <img src="/img/logo-tel.png" alt="Telefono45728036">
+                        <h5>Tel: 4572-8036</h5>
                     </div>
-                    <div class="col d-flex justify-content-end align-items-center mt-5" id="mail">
-                        <img src="../img/email.png" alt="Contacto3" class=" me-5">
-                        <h4 class="text-center">Email</h4>
+                    <div class="col-md-4 col-lg-4 mt-5" id="mail">
+                        <img src="/img/logo-mail.png" alt="Mail-contacto@m-tech.com.ar">
+                        <h5>contacto@m-tech.com.ar</h5>
                     </div>
                 </div>
               </section>
+              </div>
               <!-- Fin medios de contacto -->
+            </section>
+            <!-- Fin formulario de contacto -->
+
+              
         </main>
 
         <!-- Fin seccion central -->
@@ -102,23 +131,23 @@
 
         <!-- Pie de pagina -->
         <footer class="footer">
-            <nav class="nav-footer">
+          <section class="nav-footer">
 
-                <img src="../img/logo1.jpeg" alt="Logo" class="logo">
+              <img src="/img/logo1.jpeg" alt="Logo" class="logo">
 
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit at temporibus neque dolore.</h2>
+              <h4>Elaboramos soluciones flexibles e innovadoras para apoyar las gestion hospitalaria.</h4>
 
-                <div class="box-footer">
-                    <div class="box-social">
-                        <img src="../img/facebook-logo-icone.jpg" alt="FB"><h4>Facebook</h4>
-                    </div>
+              <div class="box-footer">
+                  <div class="box-social">
+                      <img src="/img/facebook-logo-icone.jpg" alt="FB"><h5>Facebook</h5>
+                  </div>
 
-                    <div class="box-social">
-                        <img src="../img/instagram.jpg" alt="IG"><h4>Instagram</h4>
-                    </div>
-                </div>    
-            </nav>
-        </footer>
+                  <div class="box-social">
+                      <img src="/img/instagram.jpg" alt="IG"><h5>Instagram</h5>
+                  </div>
+              </div>    
+          </section>
+      </footer>
 
         <!-- Fin pie de pagina -->
     </div>

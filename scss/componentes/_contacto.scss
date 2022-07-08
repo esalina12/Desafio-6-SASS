@@ -23,37 +23,97 @@
             border-radius: 50%;
         }
     }
+
+    .direccion{
+        height: 15%;
+        background-color: $bg-principal-transparente;
+        border-radius: 5%;
+        @media (min-width: 300px) and (max-width:1000px){
+            height: 20%;
+        }
+        p{
+            font-size: 1.5rem;
+            @media (min-width: 300px) and (max-width:1000px){
+            font-size: 1rem;
+        }
+        }
+        img{
+            width: 15vh;
+            border-radius: 60%;
+            @media (min-width: 300px) and (max-width:1000px){
+                width: 10vh;
+            }
+        }
+    }
 }
 
+/*    Formulario    */
+
+.formulario{
+    background-color: $bg-principal-transparente;
+    @include ds-flex (column, center);
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+    .form-control{
+        width: 60%;
+        margin: auto;
+        background-color: $bg-principal;
+        color: $font-color;
+        input, textarea{
+            width: 90%;
+        }
+        
+    }
+    #contacto{
+        width: 100%;
+        @include ds-flex(row,space-between);
+    
+        @media (min-width:300px) and (max-width:1000px){
+            @include ds-flex(row,space-evenly);
+            align-items: center;
+            font-size: 0.5rem;
+        }
+    
+        img{
+            border-radius: 50%;
+        }
+        
+        #wp, #tel, #mail{
+            @include ds-flex(row,space-evenly);
+            align-items: center;
+        }
+    }
+
+}
+/*   Fin formulario   */
+
+
+/*   MEdios de contacto     */
 #map{
     @media (max-width: 800px){
         grid-area: map;
     }
 }
 #wp{
-    @media (max-width: 800px){grid-area: wp;}
+    @media (max-width: 800px){
+        grid-area: wp;
+    }
     
 }
 #tel{
-    @media (max-width: 800px){grid-area: tel;}
+    @media (max-width: 800px){
+        grid-area: tel;
+    }
     
 }
 #mail{
-    @media (max-width: 800px){grid-area: mail;}
+    @media (max-width: 800px){
+        grid-area: mail;
+    }
     
 }
 
 
-.contacto{
-    @media (min-width:600px) and (max-width:1400px){
-        @include ds-flex(column,center);
-        align-items: center;
-    }
-}
 
-#cont{
-    @media (min-width:600px) and (max-width:1400px){
-        @include ds-flex(row,center);
-        align-items: center;
-    }
-}
+/*  Fin medios de contacto   */

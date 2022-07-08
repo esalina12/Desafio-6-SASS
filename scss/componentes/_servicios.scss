@@ -13,7 +13,7 @@
     justify-content: center;
     justify-items: center;
 
-    @media (min-width: 600px) and (max-width:1200px){
+    @media (min-width: 600px) and (max-width:1000px){
         grid-area: main;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -34,25 +34,32 @@
     img{
         width: 100%;
         height: 80%;
+        z-index: -10;
     }
 
-    p{
-        width: 30%;
-        font-size: 25px;
+    .p-ns{
+        text-align: center;
+        align-content: center;
+        background-color: $bg-segundo;
+        border-radius: 5%;
+        width: 60vh;
+        font-size: 1.5rem;
         position: absolute;
-        bottom: 6em;
-        z-index: 1;
-        color: black;
+        bottom: 7em;
         margin-left: 1em;
         
         @media (max-width: 800px){
             display: none;
         }
 
-        @media (min-width: 800px) and (max-width: 1200px){
+        @media (min-width: 800px) and (max-width: 1000px){
             width: 50%;
         }
-        
+
+        p{
+            color: $font-color;
+            z-index: 5;
+        }
     }
 }
 
@@ -82,16 +89,16 @@
 }
 
 .op1 img, .op2 img, .op3 img, .op4 img, .op5 img, .op6 img{
-    width: 30vh;
-    height: 30vh;
+    width: 35vh;
+    height: 35vh;
     border-radius: 30%;
     @media (max-width: 800px){
         width: 15vh;
         height: 15vh;
     }
 
-    @media (min-width: 800px) and (max-width: 1400px){
-        width: 20vh;
-        height: 20vh;
+    @media (min-width: 800px) and (max-width: 1000px){
+        width: 25vh;
+        height: 25vh;
     }
 }
