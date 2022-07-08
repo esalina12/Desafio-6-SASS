@@ -16,6 +16,6 @@ $asunto="Este mail fue enviado desde la web";
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 
-header{"location://pages/exito.html"};
+header{"location:exito.html"};
 
 ?>
