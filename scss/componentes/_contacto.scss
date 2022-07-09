@@ -1,46 +1,52 @@
-.main-contacto{
+.main-contacto {
     width: 100%;
     height: auto;
     grid-area: main;
     margin: 5em 0 5em 0;
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto auto;
         grid-template-areas: "map"
-        "wp"
-        "tel"
-        "mail";
+            "wp"
+            "tel"
+            "mail";
     }
 
-    img{
+    img {
         width: 10vh;
         height: 10vh;
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             width: 7vh;
             height: 7vh;
             border-radius: 50%;
         }
     }
 
-    .direccion{
+    .direccion {
         height: 15%;
         background-color: $bg-principal-transparente;
         border-radius: 5%;
-        @media (min-width: 300px) and (max-width:1000px){
-            height: 20%;
+
+        @media (min-width: 100px) and (max-width:1000px) {
+            height: 25%;
         }
-        p{
+
+        p {
             font-size: 1.5rem;
-            @media (min-width: 300px) and (max-width:1000px){
-            font-size: 1rem;
+
+            @media (min-width: 100px) and (max-width:1000px) {
+                font-size: 1rem;
+            }
         }
-        }
-        img{
+
+        img {
             width: 15vh;
             border-radius: 60%;
-            @media (min-width: 300px) and (max-width:1000px){
+
+            @media (min-width: 100px) and (max-width:1000px) {
                 width: 10vh;
             }
         }
@@ -49,69 +55,83 @@
 
 /*    Formulario    */
 
-.formulario{
+.formulario {
     background-color: $bg-principal-transparente;
     @include ds-flex (column, center);
     flex-wrap: wrap;
     align-items: center;
     margin: 3rem 0 3rem 0;
-    .form-control{
+
+    .form-control {
         width: 60%;
         margin: auto;
         background-color: $bg-principal;
         color: $font-color;
-        input, textarea{
+
+        input,
+        textarea {
             width: 90%;
         }
-        
+
     }
-    #contacto{
+
+    #contacto {
         width: 100%;
-        @include ds-flex(row,space-between);
-    
-        @media (min-width:300px) and (max-width:1000px){
-            @include ds-flex(row,space-evenly);
+        @include ds-flex(row, space-between);
+
+        @media (min-width:300px) and (max-width:1000px) {
+            @include ds-flex(row, space-evenly);
             align-items: center;
             font-size: 0.5rem;
         }
-    
-        img{
+
+        img {
             border-radius: 50%;
         }
-        
-        #wp, #tel, #mail{
-            @include ds-flex(row,space-evenly);
+
+        #wp,
+        #tel,
+        #mail {
+            @include ds-flex(row, space-evenly);
             align-items: center;
+        }
+
+        p{
+            font-size: 1.5rem;
+            @media (min-width:300px) and (max-width:1000px) {
+                font-size: 1.2rem;
+            }
         }
     }
 
 }
+
 /*   Fin formulario   */
 
 
 /*   MEdios de contacto     */
-#map{
-    @media (max-width: 800px){
+#map {
+    @media (max-width: 800px) {
         grid-area: map;
     }
 }
-#wp{
-    @media (max-width: 800px){
+
+#wp {
+    @media (max-width: 800px) {
         grid-area: wp;
     }
-    
 }
-#tel{
-    @media (max-width: 800px){
+
+#tel {
+    @media (max-width: 800px) {
         grid-area: tel;
     }
-    
 }
-#mail{
-    @media (max-width: 800px){
+
+#mail {
+    @media (max-width: 800px) {
         grid-area: mail;
     }
-    
 }
 
 

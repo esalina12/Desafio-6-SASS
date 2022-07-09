@@ -1,87 +1,81 @@
-
 @import "//scss/componentes/mixins";
 @import "//scss/componentes/body-grid";
 
-.main-inicio{
+.main-inicio {
     display: grid;
     grid-area: main;
     gap: 5px;
-    
-    
-    .main-title-inicio{
-        @include ds-flex(row,center);
+
+
+    .main-title-inicio {
+        @include ds-flex(row, center);
         align-items: center;
         text-align: center;
         background-color: $bg-principal-transparente;
         margin: 5rem 0 5rem 0;
-        
-        
+
         @media (min-width: 100px) and (max-width:1000px) {
             width: 100%;
             @include ds-flex(column, center);
             text-align: center;
         }
 
-        p{
+        p {
             font-size: 2rem;
-            @media (min-width: 100px) and (max-width:1000px){
+
+            @media (min-width: 100px) and (max-width:1000px) {
                 font-size: 1.5rem;
             }
         }
     }
-    
-    
-    .container-box{
+
+
+    .container-box {
         width: 100%;
-        @include ds-flex(row,space-evenly);
+        @include ds-flex(row, space-evenly);
         text-align: center;
         margin: 2em 0 2em 0;
 
-        @media (max-width: 800px){
+        @media (max-width: 800px) {
             width: 100%;
-            @include ds-flex(column,center);
+            @include ds-flex(column, center);
             text-align: center;
             align-items: center;
         }
 
-        @media (min-width: 100px) and (max-width: 1000px){
+        @media (min-width: 100px) and (max-width: 1000px) {
             width: 100%;
-            @include ds-flex(row,space-evenly);
+            @include ds-flex(row, space-evenly);
             flex-wrap: wrap;
             margin: 5em 0 5em 0;
         }
 
-        .box-img{
+        .box-img {
             width: 25%;
-            @include ds-flex(column,center);
+            @include ds-flex(column, center);
             align-items: center;
 
-            @media (min-width: 100px) and (max-width:1000px){
+            @media (min-width: 100px) and (max-width:1000px) {
                 width: 60%;
                 height: 20%;
-                @include ds-flex(column,center);
+                @include ds-flex(column, center);
                 margin: 1em 0 1em 0;
             }
 
-            &:hover{
+            &:hover {
                 transform: scale(1.2);
                 transition: all 2s;
-                @media (min-width: 100px) and (max-width: 1000px){
+
+                @media (min-width: 100px) and (max-width: 1000px) {
                     transform: none;
                     transition: none;
                 }
             }
         }
-    
-            img{
-                width: 100%;
-                height: 70%;
-               
-            }
+
+        img {
+            width: 100%;
+            height: 70%;
         }
+    }
 }
-    
-
-
-
-
