@@ -52,7 +52,7 @@
         @media (max-width: 800px){
             width: 90%;
             font-size: 1rem;
-            margin-left: 1.5em;
+            @include ds-flex(row,center);
         }
 
         @media (min-width: 800px) and (max-width: 1000px){

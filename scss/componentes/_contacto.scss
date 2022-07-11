@@ -36,7 +36,6 @@
 
         p {
             font-size: 1.5rem;
-
             @media (min-width: 100px) and (max-width:1000px) {
                 font-size: 1rem;
             }
@@ -78,6 +77,7 @@
     #contacto {
         width: 100%;
         @include ds-flex(row, space-between);
+        margin: 0 0 3rem 0;
 
         @media (min-width:300px) and (max-width:1000px) {
             @include ds-flex(row, space-evenly);
@@ -85,9 +85,7 @@
             font-size: 0.5rem;
         }
 
-        img {
-            border-radius: 50%;
-        }
+        
 
         #wp,
         #tel,
@@ -133,7 +131,4 @@
         grid-area: mail;
     }
 }
-
-
-
 /*  Fin medios de contacto   */
